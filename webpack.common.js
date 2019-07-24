@@ -2,7 +2,7 @@ const path = require('path')
 
 const config = {
   entry: {
-    index: path.resolve(__dirname, 'src/index.js')
+    index: path.resolve(__dirname, 'src/index.ts')
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
@@ -10,13 +10,21 @@ const config = {
   },
   module: {
     rules: [
-      //{}
+      {
+        test: /\.ts$/i,
+        loader: 'ts-loader'
+      },
+      {
+        test: /\.js$/i,
+        loader: 'babel-loader'
+      }
     ]
   },
   resolve: {
     alias: {
       src: path.join(__dirname, 'src')
-    }
+    },
+    extensions: ['.js', '.ts', '.json']
   },
   target: 'node'
 }
