@@ -1,0 +1,7 @@
+# node stuff
+node_modules/
+# macos
+.DS_Store
+# production
+dist/
+build/
