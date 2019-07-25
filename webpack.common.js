@@ -25,8 +25,7 @@ const config = {
       src: path.join(__dirname, 'src')
     },
     extensions: ['.js', '.ts', '.json']
-  },
-  target: 'node'
+  }
 }
 
 module.exports = config
