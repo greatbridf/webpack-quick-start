@@ -3,11 +3,12 @@ const config = require('./webpack.common')
 const HTML = require('html-webpack-plugin')
 const path = require('path')
 
-module.exports = merge(config, {
+module.exports = merge(config.config, {
   mode: 'development',
   devtool: 'inline-source-map',
   plugins: [
     new HTML({
+      title: config.title,
       inject: true
     }),
   ],
