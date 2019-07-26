@@ -1,7 +1,6 @@
 const merge = require('webpack-merge')
 const config = require('./webpack.common')
 const HTML = require('html-webpack-plugin')
-const COMMON = require('common-config-webpack-plugin')
 
 module.exports = merge(config, {
   mode: 'production',
@@ -20,7 +19,6 @@ module.exports = merge(config, {
        minifyCSS: true,
        minifyURLs: true
      }
-   }),
-   new COMMON()
+   })
   ]
 })
